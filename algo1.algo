@@ -1,0 +1,28 @@
+ALGORITHM sentence
+VAR 
+    n:INTEGER ;
+    sentence:STRING;
+    len:INTEGER:=1;
+    i:INTEGER:=1;
+    nbw:INTEGER:=0;
+    nbv:INTEGER:=0;
+BEGIN
+    
+REPEAT
+    n=sentence.length-1;
+    read(sentence);
+UNTIL ( sentence[n]='.')
+
+FOR i FROM 1 TO n-1 STEP step  DO 
+    len:= len + 1;
+    IF(sentence[i] == ' ') THEN
+        nbmot:= nbw + 1;
+    END_IF
+    IF(sentence[i] == 'a' OR sentence[i] == 'e' OR sentence[i] == 'i' OR sentence[i] == 'o' OR sentence[i] == 'u' OR sentence[i] == 'y' OR sentence[i] == 'A' |OR sentence[i] == 'E' OR sentence[i] == 'I' OR sentence[i] == 'O' OR sentence[i] == 'U' OR sentence[i] == 'Y') THEN
+        nbvo:= nbv + 1;
+    END_IF
+END_FOR
+    write(len);
+    write(nbw);
+    write(nbv);
+END
