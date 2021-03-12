@@ -3,7 +3,7 @@ VAR
     n:INTEGER ;
     sentence:STRING;
     len:INTEGER:=1;
-    i:INTEGER:=1;
+    i:INTEGER:=0;
     nbw:INTEGER:=0;
     nbv:INTEGER:=0;
 BEGIN
